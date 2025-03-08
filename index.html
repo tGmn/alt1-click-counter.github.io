@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <script src="https://runeapps.org/alt1/alt1lib.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+        }
+        .container {
+            display: inline-block;
+            background: #3a3f4b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-add { background: #4caf50; color: white; }
+        .btn-subtract { background: #f44336; color: white; }
+        .btn-reset { background: #ff9800; color: white; }
+        button:hover { opacity: 0.8; }
+        input {
+            font-size: 18px;
+            width: 80px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click Counter</h1>
+        <p>Count: <input type="number" id="counter" value="0"></p>
+        <button class="btn-add" onclick="changeCount(1)">+1</button>
+        <button class="btn-subtract" onclick="changeCount(-1)">-1</button>
+        <button class="btn-reset" onclick="resetCount()">Reset</button>
+    </div>
+    
+    <script>
+        function changeCount(amount) {
+            let counter = document.getElementById("counter");
+            counter.value = parseInt(counter.value) + amount;
+        }
+
+        function resetCount() {
+            document.getElementById("counter").value = 0;
+        }
+    </script>
+</body>
+</html>
