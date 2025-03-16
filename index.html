@@ -9,26 +9,34 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            padding: 5px;
             background-color: #282c34;
             color: white;
         }
         .container {
             display: inline-block;
             background: #3a3f4b;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 7px;
+            box-shadow: none;
         }
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 7px;
+            font-size: 19px;
+        }
+        p {
+            margin-bottom: 9px;
+        }
+        .button-container {
+            margin-top: 11px;
+            margin-bottom: 5px;
         }
         button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 18px;
+            margin: 3px;
+            padding: 5px 11px;
+            font-size: 13px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
             transition: 0.3s;
         }
@@ -37,13 +45,13 @@
         .btn-reset { background: #ff9800; color: white; }
         button:hover { opacity: 0.8; }
         input {
-            font-size: 18px;
-            width: 80px;
+            font-size: 13px;
+            width: 42px;
             text-align: center;
-            padding: 5px;
-            border-radius: 5px;
+            padding: 4px;
+            border-radius: 4px;
             border: none;
-            margin-bottom: 15px;
+            outline: none;
         }
     </style>
 </head>
@@ -51,9 +59,11 @@
     <div class="container">
         <h1>Click Counter</h1>
         <p>Count: <input type="number" id="counter" value="0"></p>
-        <button class="btn-add" onclick="changeCount(1)">+1</button>
-        <button class="btn-subtract" onclick="changeCount(-1)">-1</button>
-        <button class="btn-reset" onclick="resetCount()">Reset</button>
+        <div class="button-container">
+            <button class="btn-add" onclick="changeCount(1)">+1</button>
+            <button class="btn-subtract" onclick="changeCount(-1)">-1</button>
+            <button class="btn-reset" onclick="resetCount()">Reset</button>
+        </div>
     </div>
     
     <script>
