@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Counter</title>
+    <title>Shrek's Click Counter</title>
     <script src="https://runeapps.org/alt1/alt1lib.js"></script>
     <style>
         body {
@@ -53,11 +53,12 @@
             border: none;
             outline: none;
         }
+        #logo { max-width: 8vw; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Click Counter</h1>
+        <img src="img/logo.png" id="logo">
         <p>Count: <input type="number" id="counter" value="0"></p>
         <div class="button-container">
             <button class="btn-add" onclick="changeCount(1)">+1</button>
